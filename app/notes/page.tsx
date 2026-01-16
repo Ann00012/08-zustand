@@ -8,7 +8,7 @@ import NoteForm from "../../components/NoteForm/NoteForm";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import Pagination from "../../components/Pagination/Pagination";
-import ErrorMessage from "../error";
+import ErrorMessage from "./error";
 import Loader from "../loading";
 import { NoteList } from "../../components/NoteList/NoteList";
 import { useDebounce } from "use-debounce";
