@@ -6,7 +6,7 @@ import Footer from '@/components/Footer/Footer';
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 import css from './page.module.css';
 import "modern-normalize";
-import "./global.css";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
