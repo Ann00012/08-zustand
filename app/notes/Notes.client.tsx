@@ -20,7 +20,7 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [debouncedQuery] = useDebounce(query, 500);
 
-  const { data, isLoading, isError, isSuccess } = useQuery({
+  const { data, isLoading, isError, isSuccess,error } = useQuery({
     queryKey: ["notes", debouncedQuery, page, perPage],
     queryFn: () => fetchNotes(debouncedQuery, page, perPage),
     placeholderData: keepPreviousData,
@@ -57,7 +57,7 @@ export default function App() {
             <Loader />
           </div>
         )}
-        {isError && <ErrorMessage message="Failed to load notes" />}
+      {isError && <ErrorMessage error={error as Error} />}
 
         {isSuccess && notes.length > 0 && <NoteList notes={notes} />}
 

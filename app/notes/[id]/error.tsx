@@ -5,12 +5,17 @@ import { useEffect } from "react";
 import toast from "react-hot-toast";
 
 interface ErrorMessageProps {
-  message: string;
+  error: Error;
 }
 
-export default function ErrorMessage({ message }: ErrorMessageProps) {
+export default function ErrorMessage({ error }: ErrorMessageProps) {
   useEffect(() => {
-    toast.error(message);
-  }, [message]);
-  return null;
+    toast.error(error.message);
+  }, [error]);
+
+  return (
+    <div >
+   <p>Could not fetch note details. {error.message}</p>
+    </div>
+  );
 }

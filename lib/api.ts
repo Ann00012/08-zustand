@@ -15,7 +15,7 @@ interface PostNoteProps {
 }
 
 const ACCESS_TOKEN = process.env.NEXT_PUBLIC_NOTEHUB_TOKEN;
-const BASE_URL = "https://notehub-public.goit.study/api/notes";
+const BASE_URL = "https://notehub-public.goit.study/api/notes23";
 
 export const fetchNotes = async (query: string, page: number = 1,perPage: number = 12):Promise<ResponseNoteProps> => {
     const response = await axios.get<ResponseNoteProps>(BASE_URL, {

@@ -20,12 +20,10 @@ const NoteDetailsClient = () => {
 
   if (isLoading) return <Loading />;
 
-  if (error || !note) return <ErrorMessage message="Something went wrong" />;
+  if (error || !note) return <ErrorMessage error={new Error("Something went wrong")} />;
 
-  const formattedDate = note.updatedAt
-    ? `Updated at: ${new Date(note.updatedAt).toLocaleString()}`
-    : `Created at: ${new Date(note.createdAt).toLocaleString()}`;
-
+  const formattedDate = `Created at: ${new Date(note.createdAt).toLocaleString()}`;
+  
   return (
     <div className={css.container}>
       <div className={css.item}>
