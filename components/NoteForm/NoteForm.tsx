@@ -15,6 +15,7 @@ interface NoteFormValues {
 
 interface NoteFormProps {
   onCancel: () => void;
+  onClose?: () => void;
 }
 
 const initialValues: NoteFormValues = {

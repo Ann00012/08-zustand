@@ -11,7 +11,11 @@ export default async function NotesPage() {
 
 await queryClient.prefetchQuery({
   queryKey: ['notes'],
-  queryFn: () => fetchNotes('', 1, 12),
+  queryFn: () => fetchNotes({ 
+      search: '', 
+      page: 1, 
+      perPage: 12 
+    }),
 });
 
   return (
@@ -21,4 +25,4 @@ await queryClient.prefetchQuery({
       </HydrationBoundary>
       </main>
   );
-};
+}
