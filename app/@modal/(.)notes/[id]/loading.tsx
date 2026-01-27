@@ -1,1 +1,5 @@
-export default function Loading() { return null; }
+import css from "./loading.module.css";
+
+export default function Loader() {
+  return <span className={css.loader}></span>;
+}
