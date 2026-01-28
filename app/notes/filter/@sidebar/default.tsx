@@ -5,7 +5,11 @@ const TAGS = ["Work", "Personal", "Meeting", "Shopping", "Todo"];
 
 const SidebarNotes = () => {
   return (
+    
     <ul className={css.menuList}>
+      <li className={css.menuItem}>
+        <Link href="/notes/action/create" className={css.menuLink}> Create note +</Link>
+      </li>
       <li className={css.menuItem}>
         <Link href="/notes/filter/all" className={css.menuLink}>
           All notes
@@ -18,7 +22,8 @@ const SidebarNotes = () => {
           </Link>
         </li>
       ))}
-    </ul>
+      </ul>
+      
   );
 };
 
