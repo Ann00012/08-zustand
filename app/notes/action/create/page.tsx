@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Create note",
     description: "form for creating note",
     url: "/notes/action/create",
-    siteName: "Create note",
+    siteName: "NoteHub",
     images: [{
       url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
       width: 1200,
