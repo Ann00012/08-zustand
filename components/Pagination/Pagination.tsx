@@ -25,8 +25,8 @@ export default function Pagination({
       activeClassName={css.active}
       pageClassName={css.pageItem}
       nextLabel="→"
-      previousLabel="←"
+        previousLabel="←"
       disabledClassName={css.disabled}
     />
-  );
+  )
 }
